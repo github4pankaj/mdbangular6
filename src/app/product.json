@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "color": "blue"
+    },
+    {
+      "name": "Heelo P",
+      "color": "Green",
+      "id": 2
+    },
+    {
+      "name": "Hatt",
+      "color": "Red",
+      "id": 3
+    },
+    {
+      "name": "p1222",
+      "color": "green",
+      "id": 4
+    },
+    {
+      "name": "Hello",
+      "color": "Geen 1",
+      "id": 5
+    }
+  ]
+}

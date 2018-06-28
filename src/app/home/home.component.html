@@ -1,0 +1,36 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+  <links>
+      <span class="navbar-text white-text">
+          Products
+      </span>
+  </links>
+</mdb-navbar>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-responsive-lg table-bordered">
+      <thead class="blue-grey lighten-4">
+        <th class="th-lg">ID</th>
+        <th class="th-lg">Name</th>
+        <th class="th-lg">Color</th>
+        <th class="th-lg"></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of products">
+          <td class="rp-3">{{data.id}}</td>
+          <td class="rp-3">{{data.name}}</td>
+          <td class="rp-3">{{data.color}}</td>
+          <td>
+            <button (click)="deleteProd(data.id)" type="button" class="btn btn-danger waves-light btn-sm rp-10" mdbWavesEffect><i class="fa fa-trash-o mr-2" aria-hidden="true"></i>Delete</button>
+            <a routerLink="/updateProduct/{{data.id}}"><button type="button" class="btn btn-danger waves-light btn-sm" mdbWavesEffect><i class="fa fa-pencil mr-2" aria-hidden="true"></i>Edit</button></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary waves-light btn-sm" mdbWavesEffect>
+      <a routerLink="/product">Add Product</a>
+  </button>
+</div>
+</div>

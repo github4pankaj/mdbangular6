@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary waves-light" mdbWavesEffect>
+    <a routerLink="/">Back</a>
+</button><br>
+
+<!-- Add new product form -->
+{{confirmMsg}}
+<mdb-navbar SideClass="navbar navbar-dark green" *ngIf="isUpdated">{{confirmMsg}}</mdb-navbar>
+<div>
+<form id="updateProd" name="updateProd" #updateProductDtls="ngForm" (ngSubmit)="updateProduct(updateProductDtls.value)">
+    <p class="h5 text-center mb-4"> Update Product:</p>
+  
+    <div class="md-form">
+     
+      <input type="text" name="name" id="name" class="form-control" [(ngModel)]="data.name" mdbInputDirective ngModel>
+      <label for="orangeForm-name">Name</label>
+    </div>
+    <div class="md-form">
+     
+      <input type="text" name="color" id="color" class="form-control" [(ngModel)]="data.color" mdbInputDirective ngModel>
+      <label for="orangeForm-email">Color</label>
+    </div>
+    <div class="text-center">
+      <input class="btn btn-deep-orange waves-light" value="Update" mdbWavesEffect type="submit">
+    </div>
+  </form>
+</div>
+  <!-- Register form -->
